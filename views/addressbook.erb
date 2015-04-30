@@ -1,0 +1,21 @@
+<h1>List of contacts</h1>
+<ul>
+  <% @contacts.each() do |contact| %>
+    <a href="/contacts/<%= contact.id() %>"><%= contact.name() %>,<%= contact.address() %>, <%= contact.birthday() %></a>
+  <% end %>
+</ul>
+
+<h1>Would you like to add a new contact?</h1>
+
+<form action="/contacts" method="post"
+  <div class="form-group"
+    <input id='addressbook_id' name="addressbook_id" type="hidden" value="<%= @addressbook.id() %>">
+    <label for="name">Enter your new contact's name.</label>
+    <input id="name" name="name" class="form-control" type="text">
+    <label for="address">Enter your contact's address.</label>
+    <input id="address" name="address" class="form-control" type="text">
+    <label for="birthday">Enter your new contact's birthday.</label>
+    <input for="birthday" name="birthday" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn-success">Add contact</button>
+</form>

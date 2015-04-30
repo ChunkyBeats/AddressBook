@@ -1,0 +1,10 @@
+<h1>These are your contacts</h1>
+
+<% @contacts.each() do |contact| %>
+  <li><%= contact.name() %><%= contact.address() %><%= contact.birthday %></li>
+  <% end %>
+</ul>
+
+<br>
+<a href="/addressbooks">Go back to Address Books</a>
+<a href="/">Go back to Main Menu</a>

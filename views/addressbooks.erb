@@ -1,6 +1,6 @@
 <h1>Address Books</h1>
 <ul>
   <% @addressbooks.each() do |book| %>
-  <li><a href="/addressbooks/<%= book.id() %>"><%= book.name() %></a></li>
+    <li><a href="/addressbooks/<%= book.id() %>"><%= book.book() %></a></li>
   <% end %>
 </ul>
